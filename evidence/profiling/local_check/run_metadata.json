@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-08T07:58:01.221816+00:00",
+  "scripts": [
+    "08_Business_Key_Profiling.py",
+    "13_Coupon_Product_Profiling.py",
+    "14_Campaign_Redemption_Profiling.py"
+  ],
+  "scope": "CSV profiling, not PostgreSQL ETL validation"
+}

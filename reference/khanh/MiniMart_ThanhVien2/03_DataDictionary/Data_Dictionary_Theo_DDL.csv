@@ -1,0 +1,89 @@
+﻿Bang,LoaiBang,Cot,KieuDuLieu,ChoPhepNull,VaiTro,KhoaNgoaiThamChieu,UniqueNghiepVu,MoTaNghiepVu
+dim_day,Dimension,day_key,BIGINT,NO,PK,,,Khóa liên kết/định danh day
+dim_day,Dimension,source_day,INTEGER,NO,Thuộc tính,,source_day,DAY trong dữ liệu nguồn
+dim_day,Dimension,calendar_date,DATE,YES,Thuộc tính,,,"Ngày lịch, chỉ điền khi có mốc đối chiếu xác minh"
+dim_day,Dimension,notes,TEXT,YES,Thuộc tính,,,Thông tin mô tả bổ sung
+dim_week,Dimension,week_key,BIGINT,NO,PK,,,Khóa liên kết/định danh week
+dim_week,Dimension,source_week_no,INTEGER,NO,Thuộc tính,,source_week_no,WEEK_NO trong dữ liệu nguồn
+dim_week,Dimension,calendar_start,DATE,YES,Thuộc tính,,,"Ngày bắt đầu tuần, nếu biết"
+dim_week,Dimension,calendar_end,DATE,YES,Thuộc tính,,,"Ngày kết thúc tuần, nếu biết"
+dim_store,Dimension,store_key,BIGINT,NO,PK,,,Khóa liên kết/định danh store
+dim_store,Dimension,store_id,TEXT,NO,Thuộc tính,,store_id,Mã nghiệp vụ store
+dim_store,Dimension,store_name,TEXT,YES,Thuộc tính,,,"Tên cửa hàng, nếu có dữ liệu bổ sung"
+dim_store,Dimension,notes,TEXT,YES,Thuộc tính,,,Thông tin mô tả bổ sung
+dim_product,Dimension,product_key,BIGINT,NO,PK,,,Khóa liên kết/định danh product
+dim_product,Dimension,product_id,TEXT,NO,Thuộc tính,,product_id,Mã nghiệp vụ product
+dim_product,Dimension,manufacturer,TEXT,YES,Thuộc tính,,,Mã nhà sản xuất
+dim_product,Dimension,department,TEXT,YES,Thuộc tính,,,Ngành hàng
+dim_product,Dimension,brand,TEXT,YES,Thuộc tính,,,Thương hiệu
+dim_product,Dimension,commodity_desc,TEXT,YES,Thuộc tính,,,Nhóm hàng
+dim_product,Dimension,sub_commodity_desc,TEXT,YES,Thuộc tính,,,Nhóm hàng cấp chi tiết
+dim_product,Dimension,curr_size_of_product,TEXT,YES,Thuộc tính,,,Quy cách/kích cỡ hiện thời
+dim_product,Dimension,updated_at,TIMESTAMPTZ,NO,Thuộc tính,,,Thời điểm cập nhật Type 1
+dim_household,Dimension,household_key,BIGINT,NO,PK,,,Khóa liên kết/định danh household
+dim_household,Dimension,household_id,TEXT,NO,Thuộc tính,,household_id + effective_from_day | household_id + is_current=TRUE (partial index),Mã nghiệp vụ household
+dim_household,Dimension,has_demographics,BOOLEAN,NO,Thuộc tính,,,Có/không dữ liệu mô tả nhân khẩu học
+dim_household,Dimension,age_desc,TEXT,YES,Thuộc tính,,,Nhóm tuổi
+dim_household,Dimension,marital_status_code,TEXT,YES,Thuộc tính,,,Mã tình trạng hôn nhân
+dim_household,Dimension,income_desc,TEXT,YES,Thuộc tính,,,Nhóm thu nhập
+dim_household,Dimension,homeowner_desc,TEXT,YES,Thuộc tính,,,Tình trạng sở hữu nhà
+dim_household,Dimension,hh_comp_desc,TEXT,YES,Thuộc tính,,,Cấu trúc hộ
+dim_household,Dimension,household_size_desc,TEXT,YES,Thuộc tính,,,Quy mô hộ
+dim_household,Dimension,kid_category_desc,TEXT,YES,Thuộc tính,,,Nhóm số trẻ em trong hộ
+dim_household,Dimension,effective_from_day,INTEGER,NO,Thuộc tính,,household_id + effective_from_day,DAY bắt đầu hiệu lực phiên bản SCD2 (bao gồm)
+dim_household,Dimension,effective_to_day,INTEGER,YES,Thuộc tính,,,DAY kết thúc hiệu lực phiên bản (không bao gồm); NULL nếu hiện hành
+dim_household,Dimension,is_current,BOOLEAN,NO,Thuộc tính,,,TRUE nếu phiên bản hiện hành
+dim_household,Dimension,change_reason,TEXT,YES,Thuộc tính,,,Lý do tạo phiên bản thay đổi
+dim_campaign,Dimension,campaign_key,BIGINT,NO,PK,,,Khóa liên kết/định danh campaign
+dim_campaign,Dimension,campaign_id,TEXT,NO,Thuộc tính,,campaign_id,Mã nghiệp vụ campaign
+dim_campaign,Dimension,description,TEXT,YES,Thuộc tính,,,Mô tả chiến dịch
+dim_campaign,Dimension,start_day,INTEGER,YES,Thuộc tính,,,DAY bắt đầu chiến dịch
+dim_campaign,Dimension,end_day,INTEGER,YES,Thuộc tính,,,DAY kết thúc chiến dịch
+dim_coupon,Dimension,coupon_key,BIGINT,NO,PK,,coupon_key + campaign_key,Khóa liên kết/định danh coupon
+dim_coupon,Dimension,campaign_key,BIGINT,NO,FK,dw.dim_campaign.campaign_key,campaign_key + coupon_upc | coupon_key + campaign_key,Khóa liên kết/định danh campaign
+dim_coupon,Dimension,coupon_upc,TEXT,NO,Thuộc tính,,campaign_key + coupon_upc,Mã UPC coupon
+bridge_coupon_product,Bridge,coupon_key,BIGINT,NO,PK,dw.dim_coupon.coupon_key,,Khóa liên kết/định danh coupon
+bridge_coupon_product,Bridge,product_key,BIGINT,NO,PK,dw.dim_product.product_key,,Khóa liên kết/định danh product
+fact_sales,Fact,sales_key,BIGINT,NO,PK,,,Khóa liên kết/định danh sales
+fact_sales,Fact,file_id,TEXT,NO,Thuộc tính,,file_id + source_row_no,Mã tệp nguồn cố định dùng chống nạp trùng
+fact_sales,Fact,source_row_no,BIGINT,NO,Thuộc tính,,file_id + source_row_no,"Số thứ tự dòng trong tệp nguồn, làm định danh dòng"
+fact_sales,Fact,household_key,BIGINT,NO,FK,dw.dim_household.household_key,,Khóa liên kết/định danh household
+fact_sales,Fact,household_id,TEXT,NO,Thuộc tính,,,Mã nghiệp vụ household
+fact_sales,Fact,product_key,BIGINT,NO,FK,dw.dim_product.product_key,,Khóa liên kết/định danh product
+fact_sales,Fact,store_key,BIGINT,NO,FK,dw.dim_store.store_key,,Khóa liên kết/định danh store
+fact_sales,Fact,day_key,BIGINT,NO,FK,dw.dim_day.day_key,,Khóa liên kết/định danh day
+fact_sales,Fact,week_key,BIGINT,NO,FK,dw.dim_week.week_key,,Khóa liên kết/định danh week
+fact_sales,Fact,source_day,INTEGER,NO,Thuộc tính,,,DAY trong dữ liệu nguồn
+fact_sales,Fact,source_week_no,INTEGER,NO,Thuộc tính,,,WEEK_NO trong dữ liệu nguồn
+fact_sales,Fact,basket_id,TEXT,NO,Thuộc tính,,,Mã giỏ nguồn
+fact_sales,Fact,basket_key,TEXT,NO,Thuộc tính,,,"Khóa nghiệp vụ giỏ kết hợp hộ, giỏ, ngày và cửa hàng"
+fact_sales,Fact,trans_time,TEXT,YES,Thuộc tính,,,Giờ giao dịch theo nguồn
+fact_sales,Fact,quantity,"NUMERIC(18,3)",YES,Thuộc tính,,,Số lượng trên dòng giao dịch
+fact_sales,Fact,sales_value,"NUMERIC(18,2)",YES,Thuộc tính,,,Doanh số theo nguồn; không trừ discount thêm lần nữa
+fact_sales,Fact,retail_disc,"NUMERIC(18,2)",YES,Thuộc tính,,,Giảm giá bán lẻ theo nguồn
+fact_sales,Fact,coupon_disc,"NUMERIC(18,2)",YES,Thuộc tính,,,Giảm coupon theo nguồn
+fact_sales,Fact,coupon_match_disc,"NUMERIC(18,2)",YES,Thuộc tính,,,Giảm khớp coupon theo nguồn
+fact_campaign_contact,Fact,campaign_contact_key,BIGINT,NO,PK,,,Khóa liên kết/định danh campaign_contact
+fact_campaign_contact,Fact,file_id,TEXT,NO,Thuộc tính,,file_id + source_row_no,Mã tệp nguồn cố định dùng chống nạp trùng
+fact_campaign_contact,Fact,source_row_no,BIGINT,NO,Thuộc tính,,file_id + source_row_no,"Số thứ tự dòng trong tệp nguồn, làm định danh dòng"
+fact_campaign_contact,Fact,household_key,BIGINT,NO,FK,dw.dim_household.household_key,,Khóa liên kết/định danh household
+fact_campaign_contact,Fact,household_id,TEXT,NO,Thuộc tính,,household_id + campaign_key,Mã nghiệp vụ household
+fact_campaign_contact,Fact,campaign_key,BIGINT,NO,FK,dw.dim_campaign.campaign_key,household_id + campaign_key,Khóa liên kết/định danh campaign
+fact_coupon_redemption,Fact,redemption_key,BIGINT,NO,PK,,,Khóa liên kết/định danh redemption
+fact_coupon_redemption,Fact,file_id,TEXT,NO,Thuộc tính,,file_id + source_row_no,Mã tệp nguồn cố định dùng chống nạp trùng
+fact_coupon_redemption,Fact,source_row_no,BIGINT,NO,Thuộc tính,,file_id + source_row_no,"Số thứ tự dòng trong tệp nguồn, làm định danh dòng"
+fact_coupon_redemption,Fact,household_key,BIGINT,NO,FK,dw.dim_household.household_key,,Khóa liên kết/định danh household
+fact_coupon_redemption,Fact,household_id,TEXT,NO,Thuộc tính,,,Mã nghiệp vụ household
+fact_coupon_redemption,Fact,day_key,BIGINT,NO,FK,dw.dim_day.day_key,,Khóa liên kết/định danh day
+fact_coupon_redemption,Fact,source_day,INTEGER,NO,Thuộc tính,,,DAY trong dữ liệu nguồn
+fact_coupon_redemption,Fact,campaign_key,BIGINT,NO,FK,dw.dim_campaign.campaign_key,,Khóa liên kết/định danh campaign
+fact_coupon_redemption,Fact,coupon_key,BIGINT,NO,FK,dw.dim_coupon.coupon_key (ghép với campaign_key),,Khóa liên kết/định danh coupon
+fact_promotion,Fact,promotion_key,BIGINT,NO,PK,,,Khóa liên kết/định danh promotion
+fact_promotion,Fact,product_key,BIGINT,NO,FK,dw.dim_product.product_key,product_key + store_key + week_key + display_code + mailer_code,Khóa liên kết/định danh product
+fact_promotion,Fact,store_key,BIGINT,NO,FK,dw.dim_store.store_key,product_key + store_key + week_key + display_code + mailer_code,Khóa liên kết/định danh store
+fact_promotion,Fact,week_key,BIGINT,NO,FK,dw.dim_week.week_key,product_key + store_key + week_key + display_code + mailer_code,Khóa liên kết/định danh week
+fact_promotion,Fact,display_code,TEXT,NO,Thuộc tính,,product_key + store_key + week_key + display_code + mailer_code,"Mã display; giá trị chuỗi, NOT NULL"
+fact_promotion,Fact,mailer_code,TEXT,NO,Thuộc tính,,product_key + store_key + week_key + display_code + mailer_code,"Mã mailer; giá trị chuỗi, NOT NULL"
+fact_promotion,Fact,has_display,BOOLEAN,YES,Thuộc tính,,,Cờ có quảng bá display
+fact_promotion,Fact,has_mailer,BOOLEAN,YES,Thuộc tính,,,Cờ có quảng bá mailer
+fact_promotion,Fact,source_row_count,BIGINT,NO,Thuộc tính,,,Số dòng causal_data gộp vào tổ hợp promotion

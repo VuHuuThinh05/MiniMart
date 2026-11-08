@@ -1,0 +1,47 @@
+[
+  {
+    "page": "Bán hàng",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "Hộ khách hàng",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "Chiến dịch và coupon",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "Sản phẩm và quảng bá",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "Chất lượng dữ liệu",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "Kiến trúc & ERD",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "Vận hành ETL",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "RFM custom window",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "page": "Empty product filter",
+    "passed": true,
+    "errors": []
+  }
+]

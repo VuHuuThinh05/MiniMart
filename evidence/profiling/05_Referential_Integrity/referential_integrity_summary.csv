@@ -1,0 +1,9 @@
+﻿Relationship,Source_Rows,Rows_With_Missing_Key,Unmatched_Rows,Unmatched_Unique_Samples,Interpretation
+transaction_product,2595732,0,0,0,Review unmatched references
+transaction_household_demographic_coverage,2595732,0,1168429,100,Expected partial coverage; not automatically an error
+campaign_table_campaign,7208,0,0,0,Review unmatched references
+coupon_campaign,124548,0,0,0,Review unmatched references
+coupon_redempt_campaign,2318,0,0,0,Review unmatched references
+coupon_redempt_coupon,2318,0,0,0,Review unmatched references
+coupon_redempt_campaign_household,2318,0,0,0,Review unmatched references
+causal_data_product,36786524,0,0,0,Review unmatched references

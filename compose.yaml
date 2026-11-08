@@ -1,0 +1,82 @@
+name: minimart_demo
+x-db-env: &db-env
+  DB_HOST: postgres
+  DB_PORT: "5432"
+  DB_NAME: minimart
+  DB_USER: minimart
+  DB_PASSWORD: minimart_local_2026
+services:
+  postgres:
+    image: postgres:16
+    shm_size: "512mb"
+    environment:
+      POSTGRES_DB: minimart
+      POSTGRES_USER: minimart
+      POSTGRES_PASSWORD: minimart_local_2026
+    ports: ["127.0.0.1:${PG_PORT:-55433}:5432"]
+    volumes: ["minimart_pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U minimart -d minimart"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    
+  dashboard:
+    image: minimart-dashboard:integrated-v1
+    build: ./dashboard
+    environment:
+      <<: *db-env
+      DB_USER: minimart_reader
+      DB_PASSWORD: minimart_reader_local_2026
+    ports: ["127.0.0.1:${DASHBOARD_PORT:-8502}:8501"]
+    depends_on:
+      postgres: {condition: service_healthy}
+    volumes: ["./evidence:/app/evidence:ro"]
+  tools:
+    image: minimart-dashboard:integrated-v1
+    build: ./dashboard
+    environment: *db-env
+    working_dir: /project
+    volumes: ["./:/project"]
+    profiles: [tools]
+    command: ["python", "-u", "scripts/etl.py"]
+    depends_on:
+      postgres: {condition: service_healthy}
+  scheduler:
+    image: minimart-dashboard:integrated-v1
+    environment: *db-env
+    working_dir: /project
+    volumes: ["./:/project"]
+    profiles: [schedule]
+    command: ["python", "-u", "scripts/scheduler.py", "--interval", "86400"]
+    restart: unless-stopped
+    depends_on:
+      postgres: {condition: service_healthy}
+  postgres_test:
+    image: postgres:16
+    shm_size: "512mb"
+    environment:
+      POSTGRES_DB: minimart
+      POSTGRES_USER: minimart
+      POSTGRES_PASSWORD: minimart_local_2026
+    profiles: [test]
+    tmpfs: [/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U minimart -d minimart"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+  test:
+    image: minimart-dashboard:integrated-v1
+    environment:
+      <<: *db-env
+      DB_HOST: postgres_test
+      MINIMART_TEST_ONLY: "1"
+    working_dir: /project
+    volumes: ["./:/project"]
+    profiles: [test]
+    command: ["python", "-u", "tests/test_integration.py"]
+    depends_on:
+      postgres_test: {condition: service_healthy}
+volumes:
+  minimart_pgdata:

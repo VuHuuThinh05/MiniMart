@@ -1,0 +1,69 @@
+{
+  "utc": "2026-11-08T11:48:36.050838+00:00",
+  "release": "f8f2036e2b074a77a99be03da8f8d747",
+  "engine": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "checks": [
+    {
+      "check": "sales_row_count",
+      "passed": true
+    },
+    {
+      "check": "rounded_sales_value",
+      "passed": true
+    },
+    {
+      "check": "mart_sales_value",
+      "passed": true
+    },
+    {
+      "check": "mart_basket_count",
+      "passed": true
+    },
+    {
+      "check": "promotion_source_count",
+      "passed": true
+    },
+    {
+      "check": "promotion_sales_value",
+      "passed": true
+    },
+    {
+      "check": "household_scd_ranges",
+      "passed": true
+    },
+    {
+      "check": "source_day_keys",
+      "passed": true
+    },
+    {
+      "check": "source_week_keys",
+      "passed": true
+    },
+    {
+      "check": "rfm_snapshot_vs_function",
+      "passed": true
+    },
+    {
+      "check": "one_current_version",
+      "passed": true
+    },
+    {
+      "check": "response_bounds",
+      "passed": true
+    },
+    {
+      "check": "file_balance",
+      "passed": true
+    },
+    {
+      "check": "fk_validated",
+      "passed": true
+    }
+  ],
+  "totals": {
+    "sales_rows": "2595732",
+    "sales_value": "8057463.08",
+    "households": "2500",
+    "baskets": "276484"
+  }
+}

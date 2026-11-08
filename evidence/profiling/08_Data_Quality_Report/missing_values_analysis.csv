@@ -1,0 +1,5 @@
+﻿File_Name,Column_Name,Missing_Count,Missing_Rate (%),Nhận xét
+product.csv,DEPARTMENT,15,"0,0162",Thiếu đồng thời với hai trường mô tả
+product.csv,COMMODITY_DESC,15,"0,0162",Thiếu đồng thời với hai trường mô tả
+product.csv,SUB_COMMODITY_DESC,15,"0,0162",Thiếu đồng thời với hai trường mô tả
+product.csv,CURR_SIZE_OF_PRODUCT,30607,"33,14",Thiếu thông tin kích thước sản phẩm

@@ -1,0 +1,3 @@
+pglast
+playwright
+# Install dashboard/requirements.txt first; these are optional tooling only.

@@ -1,0 +1,126 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Aggregate",
+      "Strategy": "Sorted",
+      "Partial Mode": "Simple",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 486399.84,
+      "Total Cost": 518882.19,
+      "Plan Rows": 2856,
+      "Plan Width": 52,
+      "Actual Startup Time": 8726.168,
+      "Actual Total Time": 11712.864,
+      "Actual Rows": 2544,
+      "Actual Loops": 1,
+      "Group Key": [
+        "week_no",
+        "department"
+      ],
+      "Shared Hit Blocks": 2272,
+      "Shared Read Blocks": 21920,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 33722,
+      "Temp Written Blocks": 33783,
+      "Plans": [
+        {
+          "Node Type": "Sort",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 486399.84,
+          "Total Cost": 492889.17,
+          "Plan Rows": 2595732,
+          "Plan Width": 42,
+          "Actual Startup Time": 8726.1,
+          "Actual Total Time": 10822.377,
+          "Actual Rows": 2595732,
+          "Actual Loops": 1,
+          "Sort Key": [
+            "week_no",
+            "department",
+            "basket_id"
+          ],
+          "Sort Method": "external merge",
+          "Sort Space Used": 134904,
+          "Sort Space Type": "Disk",
+          "Shared Hit Blocks": 2272,
+          "Shared Read Blocks": 21920,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 33722,
+          "Temp Written Blocks": 33783,
+          "Plans": [
+            {
+              "Node Type": "Seq Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Relation Name": "sales_snapshot",
+              "Alias": "sales_snapshot",
+              "Startup Cost": 0.0,
+              "Total Cost": 50149.32,
+              "Plan Rows": 2595732,
+              "Plan Width": 42,
+              "Actual Startup Time": 162.802,
+              "Actual Total Time": 562.064,
+              "Actual Rows": 2595732,
+              "Actual Loops": 1,
+              "Shared Hit Blocks": 2272,
+              "Shared Read Blocks": 21920,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            }
+          ]
+        }
+      ]
+    },
+    "Planning": {
+      "Shared Hit Blocks": 2,
+      "Shared Read Blocks": 0,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0
+    },
+    "Planning Time": 0.103,
+    "Triggers": [],
+    "JIT": {
+      "Functions": 7,
+      "Options": {
+        "Inlining": true,
+        "Optimization": true,
+        "Expressions": true,
+        "Deforming": true
+      },
+      "Timing": {
+        "Generation": 0.844,
+        "Inlining": 21.415,
+        "Optimization": 84.64,
+        "Emission": 56.685,
+        "Total": 163.583
+      }
+    },
+    "Execution Time": 11729.439
+  }
+]

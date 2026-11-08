@@ -1,0 +1,11 @@
+﻿Metric,Value
+Coupon rows,124548
+Product rows,92353
+Coupon rows with missing key,0
+Coupon rows matched to product,124548
+Coupon rows unmatched to product,0
+Distinct campaign-coupon-product combinations,119384
+Distinct campaign-coupon combinations,1397
+Coupons linked to multiple products,1339
+Products linked to multiple coupons,38075
+Repeated campaign-coupon-product keys,1824

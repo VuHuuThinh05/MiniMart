@@ -1,0 +1,7 @@
+﻿Metric,Value
+Total causal source rows,36786524
+Normalized causal keys,36771279
+Duplicate normalized keys,0
+Total distinct transaction keys,2370784
+Matched transaction keys,483320
+Unmatched transaction keys,1887464

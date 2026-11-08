@@ -1,0 +1,42 @@
+{
+  "utc": "2026-11-08T11:43:29.437679+00:00",
+  "database_version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "host_platform": "Linux-6.12.76-linuxkit-x86_64-with-glibc2.41",
+  "rows": 520000,
+  "source": "Synthetic generate_series, based on Khanh design; separate bench tables",
+  "equal_full_multiset": true,
+  "equal_query": true,
+  "method": "3 warmups, 15 rotating runs per variant, warm cache, no cache purge; partition and index tested separately",
+  "settings": {
+    "shared_buffers": "128MB",
+    "work_mem": "4MB",
+    "max_parallel_workers_per_gather": "2",
+    "jit": "on"
+  },
+  "variants": {
+    "plain": {
+      "median_ms": 50.995,
+      "min_ms": 38.122,
+      "max_ms": 93.861,
+      "p95_ms": 93.861
+    },
+    "partitioned": {
+      "median_ms": 5.308,
+      "min_ms": 4.277,
+      "max_ms": 13.642,
+      "p95_ms": 13.642
+    },
+    "single_index": {
+      "median_ms": 8.598,
+      "min_ms": 6.924,
+      "max_ms": 19.695,
+      "p95_ms": 19.695
+    },
+    "composite_index": {
+      "median_ms": 1.603,
+      "min_ms": 1.263,
+      "max_ms": 2.58,
+      "p95_ms": 2.58
+    }
+  }
+}

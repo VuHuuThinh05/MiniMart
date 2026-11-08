@@ -1,0 +1,17 @@
+﻿Metric,Value
+Total causal_data rows,36786524
+Causal rows with missing business key,0
+Causal rows with missing DISPLAY or MAILER,0
+Distinct PRODUCT-STORE-WEEK keys,36771279
+Business key groups with repeated rows,15245
+Excess rows within repeated business keys,15245
+Maximum rows per business key,2
+Keys with multiple DISPLAY/MAILER combinations,15245
+Repeated full-row groups,0
+Excess repeated full rows,0
+Transaction rows,2595732
+Transaction rows with missing business key,0
+Distinct transaction PRODUCT-STORE-WEEK keys,2370784
+Transaction keys matched to causal_data,483320
+Transaction keys unmatched to causal_data,1887464
+Causal keys without transaction,36287959

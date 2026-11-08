@@ -1,0 +1,5 @@
+﻿Fact,Nguon,Grain,DinhDanhUNIQUE,ChiTieu_Chieu,LuuY
+fact_sales,transaction_data,1 dòng giao dịch sản phẩm,file_id + source_row_no,"Các khóa liên kết Household/Product/Store/Day/Week; quantity, sales_value, discount",Không đếm dòng fact thành số giỏ; basket_key để đếm giỏ
+fact_campaign_contact,campaign_table,1 hộ + 1 chiến dịch,household_id + campaign_key,"household_key, campaign_key",Bảo vệ grain theo household_id dù có SCD2
+fact_coupon_redemption,coupon_redempt,1 dòng đổi coupon,file_id + source_row_no,"household_key, day_key, campaign_key, coupon_key",FK ghép coupon_key + campaign_key
+fact_promotion,causal_data,1 tổ hợp product + store + week + display + mailer,product_key + store_key + week_key + display_code + mailer_code,"source_row_count, has_display, has_mailer",Không được gộp mất mã display/mailer

@@ -1,0 +1,5 @@
+{
+  "run_id": "5189b094145e4b9880dde111ec83f77e",
+  "status": "FAILED",
+  "error": "2 rejected rows; inspect audit.rejects. Use --allow-rejects only to explicitly publish accepted rows."
+}

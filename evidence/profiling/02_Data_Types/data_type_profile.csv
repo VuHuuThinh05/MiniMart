@@ -1,0 +1,47 @@
+﻿File_Name,Column_Name,Pandas_Dtype,Total_Rows,Non_Null_Count,Null_Count,Numeric_Convertible_Count,Non_Numeric_Count,Sample_Values
+campaign_desc.csv,DESCRIPTION,object,30,30,0,0,30,TypeB | TypeC | TypeA
+campaign_desc.csv,CAMPAIGN,object,30,30,0,30,0,24 | 15 | 25 | 20 | 23
+campaign_desc.csv,START_DAY,object,30,30,0,30,0,659 | 547 | 615 | 646 | 624
+campaign_desc.csv,END_DAY,object,30,30,0,30,0,719 | 708 | 691 | 685 | 684
+campaign_table.csv,DESCRIPTION,object,7208,7208,0,0,7208,TypeA | TypeB | TypeC
+campaign_table.csv,household_key,object,7208,7208,0,7208,0,17 | 27 | 212 | 208 | 192
+campaign_table.csv,CAMPAIGN,object,7208,7208,0,7208,0,26 | 30 | 8 | 13 | 18
+causal_data.csv,PRODUCT_ID,object,36786524,36786524,0,36786524,0,26190 | 26355 | 26426 | 26540 | 26601
+causal_data.csv,STORE_ID,object,36786524,36786524,0,36786524,0,286 | 288 | 289 | 292 | 293
+causal_data.csv,WEEK_NO,object,36786524,36786524,0,36786524,0,70 | 52 | 71 | 73 | 72
+causal_data.csv,display,object,36786524,36786524,0,36073344,713180,0 | 5 | 1 | 4 | 3
+causal_data.csv,mailer,object,36786524,36786524,0,11534183,25252341,A | 0 | H | D | F
+coupon.csv,COUPON_UPC,object,124548,124548,0,124548,0,10000089061 | 10000089064 | 10000089073 | 51800009050 | 52100000076
+coupon.csv,PRODUCT_ID,object,124548,124548,0,124548,0,27160 | 27754 | 28897 | 28919 | 28929
+coupon.csv,CAMPAIGN,object,124548,124548,0,124548,0,4 | 9 | 12 | 28 | 25
+coupon_redempt.csv,household_key,object,2318,2318,0,2318,0,1 | 8 | 13 | 14 | 18
+coupon_redempt.csv,DAY,object,2318,2318,0,2318,0,421 | 427 | 597 | 422 | 396
+coupon_redempt.csv,COUPON_UPC,object,2318,2318,0,2318,0,10000085364 | 51700010076 | 54200000033 | 10000085476 | 54200029176
+coupon_redempt.csv,CAMPAIGN,object,2318,2318,0,2318,0,8 | 18 | 5 | 11 | 10
+hh_demographic.csv,AGE_DESC,object,801,801,0,0,801,65+ | 45-54 | 25-34 | 35-44 | 19-24
+hh_demographic.csv,MARITAL_STATUS_CODE,object,801,801,0,0,801,A | U | B
+hh_demographic.csv,INCOME_DESC,object,801,801,0,0,801,35-49K | 50-74K | 25-34K | 75-99K | Under 15K
+hh_demographic.csv,HOMEOWNER_DESC,object,801,801,0,0,801,Homeowner | Unknown | Renter | Probable Renter | Probable Owner
+hh_demographic.csv,HH_COMP_DESC,object,801,801,0,0,801,2 Adults No Kids | 2 Adults Kids | Single Female | Unknown | Single Male
+hh_demographic.csv,HOUSEHOLD_SIZE_DESC,object,801,801,0,735,66,2 | 3 | 4 | 1 | 5+
+hh_demographic.csv,KID_CATEGORY_DESC,object,801,801,0,174,627,None/Unknown | 1 | 2 | 3+
+hh_demographic.csv,household_key,object,801,801,0,801,0,1 | 7 | 8 | 13 | 16
+product.csv,PRODUCT_ID,object,92353,92353,0,92353,0,25671 | 26081 | 26093 | 26190 | 26355
+product.csv,MANUFACTURER,object,92353,92353,0,92353,0,2 | 69 | 16 | 32 | 181
+product.csv,DEPARTMENT,object,92353,92353,0,0,92353,GROCERY | MISC. TRANS. | PASTRY | DRUG GM | MEAT-PCKGD
+product.csv,BRAND,object,92353,92353,0,0,92353,National | Private
+product.csv,COMMODITY_DESC,object,92353,92353,0,0,92353,FRZN ICE | NO COMMODITY DESCRIPTION | BREAD | FRUIT - SHELF STABLE | COOKIES/CONES
+product.csv,SUB_COMMODITY_DESC,object,92353,92353,0,0,92353,ICE - CRUSHED/CUBED | NO SUBCOMMODITY DESCRIPTION | BREAD:ITALIAN/FRENCH | APPLE SAUCE | SPECIALTY COOKIES
+product.csv,CURR_SIZE_OF_PRODUCT,object,92353,92353,0,0,92353,22 LB |   | 50 OZ | 14 OZ | 2.5 OZ
+transaction_data.csv,household_key,object,2595732,2595732,0,2595732,0,2375 | 1364 | 1130 | 1173 | 98
+transaction_data.csv,BASKET_ID,object,2595732,2595732,0,2595732,0,26984851472 | 26984851516 | 26984896261 | 26984905972 | 26984945254
+transaction_data.csv,DAY,object,2595732,2595732,0,2595732,0,1 | 2 | 3 | 4 | 5
+transaction_data.csv,PRODUCT_ID,object,2595732,2595732,0,2595732,0,1004906 | 1033142 | 1036325 | 1082185 | 8160430
+transaction_data.csv,QUANTITY,object,2595732,2595732,0,2595732,0,1 | 2 | 3 | 0 | 4
+transaction_data.csv,SALES_VALUE,object,2595732,2595732,0,2595732,0,1.39 | 0.82 | 0.99 | 1.21 | 1.5
+transaction_data.csv,STORE_ID,object,2595732,2595732,0,2595732,0,364 | 31742 | 31642 | 412 | 337
+transaction_data.csv,RETAIL_DISC,object,2595732,2595732,0,2595732,0,-0.6 | 0 | -0.3 | -0.39 | -0.68
+transaction_data.csv,TRANS_TIME,object,2595732,2595732,0,2595732,0,1631 | 1642 | 1520 | 1340 | 2042
+transaction_data.csv,WEEK_NO,object,2595732,2595732,0,2595732,0,1 | 2 | 3 | 4 | 5
+transaction_data.csv,COUPON_DISC,object,2595732,2595732,0,2595732,0,0 | -1 | -0.4 | -0.75 | -0.59
+transaction_data.csv,COUPON_MATCH_DISC,object,2595732,2595732,0,2595732,0,0 | -0.4 | -0.25 | -0.45 | -0.75

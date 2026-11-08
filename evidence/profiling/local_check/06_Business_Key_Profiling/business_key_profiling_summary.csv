@@ -1,0 +1,6 @@
+﻿Table,Key_Columns,Total_Rows,Rows_With_Missing_Key,Distinct_Key_Combinations,Duplicate_Groups,Duplicate_Excess_Rows,Max_Occurrences,Is_Unique
+product,PRODUCT_ID,92353,0,92353,0,0,1,True
+hh_demographic,household_key,801,0,801,0,0,1,True
+campaign_desc,CAMPAIGN,30,0,30,0,0,1,True
+campaign_table,household_key + CAMPAIGN,7208,0,7208,0,0,1,True
+coupon_redempt,household_key + DAY + COUPON_UPC + CAMPAIGN,2318,0,2318,0,0,1,True

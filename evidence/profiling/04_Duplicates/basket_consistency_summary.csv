@@ -1,0 +1,19 @@
+﻿Metric,Value
+Total transaction rows,2595732
+Distinct BASKET_ID,276484
+BASKET_ID with multiple households,0
+BASKET_ID with multiple days,0
+BASKET_ID with multiple stores,0
+BASKET_ID with multiple weeks,0
+Distinct household + BASKET_ID,276484
+Household-basket with multiple days,0
+Household-basket with multiple stores,0
+Household-basket with multiple weeks,0
+Candidate BasketKey count,276484
+Candidate BasketKey with multiple weeks,0
+Candidate BasketKey with multiple source rows,216439
+Missing household_key,0
+Missing BASKET_ID,0
+Missing DAY,0
+Missing STORE_ID,0
+Missing WEEK_NO,0

@@ -1,0 +1,4 @@
+﻿Column,Total_Rows,Valid_Count,Missing_Count,Invalid_Count,Min_Value,Max_Value,Distinct_Values
+DAY,2595732,2595732,0,0,1,711,711
+WEEK_NO,2595732,2595732,0,0,1,102,102
+TRANS_TIME,2595732,2595732,0,0,0000,2359,1440

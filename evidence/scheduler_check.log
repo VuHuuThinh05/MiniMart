@@ -1,0 +1,37 @@
+﻿scheduler-1  | SCOPE: causal_data = first 2,000,000 records
+scheduler-1  | Other seven baseline CSVs: full source. Promotion sample is NOT representative.
+scheduler-1  |   SAMPLE causal_data: 250,000/2,000,000 records
+scheduler-1  |   SAMPLE causal_data: 500,000/2,000,000 records
+scheduler-1  |   SAMPLE causal_data: 750,000/2,000,000 records
+scheduler-1  |   SAMPLE causal_data: 1,000,000/2,000,000 records
+scheduler-1  |   SAMPLE causal_data: 1,250,000/2,000,000 records
+scheduler-1  |   SAMPLE causal_data: 1,500,000/2,000,000 records
+scheduler-1  |   SAMPLE causal_data: 1,750,000/2,000,000 records
+scheduler-1  |   SAMPLE causal_data: 2,000,000/2,000,000 records
+scheduler-1  |   SAMPLE ready: 2,000,000 records; original CSV unchanged
+scheduler-1  | raw/stg:product.csv
+scheduler-1  |   REUSE product.csv: committed raw/stg; no COPY
+scheduler-1  | DONE raw/stg:product.csv (0.0s)
+scheduler-1  | raw/stg:hh_demographic.csv
+scheduler-1  |   REUSE hh_demographic.csv: committed raw/stg; no COPY
+scheduler-1  | DONE raw/stg:hh_demographic.csv (0.0s)
+scheduler-1  | raw/stg:campaign_desc.csv
+scheduler-1  |   REUSE campaign_desc.csv: committed raw/stg; no COPY
+scheduler-1  | DONE raw/stg:campaign_desc.csv (0.0s)
+scheduler-1  | raw/stg:campaign_table.csv
+scheduler-1  |   REUSE campaign_table.csv: committed raw/stg; no COPY
+scheduler-1  | DONE raw/stg:campaign_table.csv (0.0s)
+scheduler-1  | raw/stg:coupon.csv
+scheduler-1  |   REUSE coupon.csv: committed raw/stg; no COPY
+scheduler-1  | DONE raw/stg:coupon.csv (0.0s)
+scheduler-1  | raw/stg:coupon_redempt.csv
+scheduler-1  |   REUSE coupon_redempt.csv: committed raw/stg; no COPY
+scheduler-1  | DONE raw/stg:coupon_redempt.csv (0.0s)
+scheduler-1  | raw/stg:transaction_data.csv
+scheduler-1  |   REUSE transaction_data.csv: committed raw/stg; no COPY
+scheduler-1  | DONE raw/stg:transaction_data.csv (0.0s)
+scheduler-1  | raw/stg:causal_data.csv
+scheduler-1  |   REUSE causal_data.csv: committed raw/stg; no COPY
+scheduler-1  | DONE raw/stg:causal_data.csv (0.0s)
+scheduler-1  | SKIPPED 0e69338ca0854a828e1f584f408a02db
+scheduler-1  | Scheduled ETL exit: 0

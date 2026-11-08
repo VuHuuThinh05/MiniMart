@@ -1,0 +1,10 @@
+
+Data/
+*.zip
+.venv/
+__pycache__/
+
+Data/
+*.zip
+.venv/
+__pycache__/

@@ -1,0 +1,153 @@
+{
+  "utc": "2026-11-08T11:50:32.289655+00:00",
+  "engine": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "copy_mode": "copy",
+  "scope": "Synthetic isolated fixture; not acceptance of all eight production CSVs. BM01 uses the tiny fixture; BM02/BM03 use 520000 synthetic rows.",
+  "tests": [
+    {
+      "test_id": "T01",
+      "title": "8 CSV, row counts and manifest",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T02",
+      "title": "12 DW tables and 17 FK",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T03",
+      "title": "Source rounded = fact = mart",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T04",
+      "title": "Composite baskets and stable households",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T05",
+      "title": "Household without demographics retained",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T06",
+      "title": "Multi-product coupon does not multiply redemptions",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T07",
+      "title": "Promotion rolled up without fanout, unknown retained",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T08",
+      "title": "Replay does not change fact or published version",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T09",
+      "title": "Rejected rows retained; failed runs preserve watermark/release",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T10",
+      "title": "SCD intervals, boundary and rekey",
+      "status": "PASS",
+      "actual": "([(0, 95), (95, 100), (100, None)], [(90, '35-49K'), (100, '50-74K')])"
+    },
+    {
+      "test_id": "T11",
+      "title": "Dashboard SQL filters, empty campaign denominator and as-of demographic",
+      "status": "PASS",
+      "actual": "(Decimal('45.00'), 2, 2)"
+    },
+    {
+      "test_id": "T13",
+      "title": "Whole-household sampling preserves basket lines",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T14",
+      "title": "Multiple SCD versions counted as one household",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T15",
+      "title": "Equal R/F/M values get equal scores",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T16",
+      "title": "Bridge EXISTS filter preserves sales sum",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T17",
+      "title": "Campaign periods clip bounds and keep nonbuying contacts",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T18",
+      "title": "Replay aggregate source counts and lineage remain stable",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T19",
+      "title": "Late fact uses historical version and refreshes mart/RFM",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "EXTRA_SCD_REPLAY",
+      "title": "SCD event replay is idempotent",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "EXTRA_BATCH_BALANCE",
+      "title": "read=accepted+rejected+skipped",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "EXTRA_CENT_RULE",
+      "title": "Round each source row to 2 decimals before aggregation",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "EXTRA_SCD_OVERLAP",
+      "title": "Database exclusion rejects overlapping intervals",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "EXTRA_PRODUCT_TYPE1",
+      "title": "Type1 preserves product key and event replay",
+      "status": "PASS",
+      "actual": "None"
+    },
+    {
+      "test_id": "T12",
+      "title": "BM01 fixture and BM02/BM03 synthetic: equality gates and raw plans",
+      "status": "PASS",
+      "actual": "See evidence/tests/artifacts; not production dashboard timings"
+    }
+  ],
+  "error": null
+}

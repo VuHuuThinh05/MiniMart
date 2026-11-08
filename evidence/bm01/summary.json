@@ -1,0 +1,85 @@
+{
+  "utc": "2026-11-08T11:39:22.924875+00:00",
+  "release": "f8f2036e2b074a77a99be03da8f8d747",
+  "database_version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "host_platform": "Linux-6.12.76-linuxkit-x86_64-with-glibc2.41",
+  "client_python": "3.11.18",
+  "cpu_visible": 12,
+  "result_rows": 2544,
+  "equal": true,
+  "source_rows": 2595732,
+  "method": "Three warmups each; fifteen alternating pairs; EXPLAIN ANALYZE BUFFERS FORMAT JSON; warm cache, no cache purge. Not end-to-end HTTP latency.",
+  "settings": {
+    "shared_buffers": "128MB",
+    "work_mem": "4MB",
+    "max_parallel_workers_per_gather": "2",
+    "jit": "on"
+  },
+  "refresh_ms": 7757.809513999973,
+  "create_ms": 11598.01465999999,
+  "source_layer": "bench.sales_snapshot copied from mart.sales_base over dw.fact_sales; scan vs preaggregation, not full dashboard latency",
+  "source_manifest": [
+    {
+      "filename": "campaign_desc.csv",
+      "sha256": "632535c6bcdd97b5681e84c2c0652ddc4eaca8a0f899a3bb37dae8dbdc089684",
+      "source_rows": 30,
+      "loaded_rows": 30
+    },
+    {
+      "filename": "campaign_table.csv",
+      "sha256": "a716f88953c9ddf8847e191d862e8d022afd19cf7419f52cbe6dde950a121f21",
+      "source_rows": 7208,
+      "loaded_rows": 7208
+    },
+    {
+      "filename": "causal_data.csv",
+      "sha256": "8031d6e95f1f21b9154cf1cd18c1b5cf82492c964957c8b6d31bb02af2f9df8f",
+      "source_rows": 2000000,
+      "loaded_rows": 2000000
+    },
+    {
+      "filename": "coupon.csv",
+      "sha256": "718f4d466df8a54bbff45f340e0b601049721b0715503394a601bac3093c727d",
+      "source_rows": 124548,
+      "loaded_rows": 124548
+    },
+    {
+      "filename": "coupon_redempt.csv",
+      "sha256": "70a98f3bfb28be0dd850f19c8d806d2a23e44014546651367b21538db6fba1f8",
+      "source_rows": 2318,
+      "loaded_rows": 2318
+    },
+    {
+      "filename": "hh_demographic.csv",
+      "sha256": "aeb10246d0c4f3d3433d1f441265b6c7e70b0926129b834a3b589517948b9f22",
+      "source_rows": 801,
+      "loaded_rows": 801
+    },
+    {
+      "filename": "product.csv",
+      "sha256": "7ecbcec41e0f1e5a51b43a359965cc50dc5586a2b900a378b64032750fedc949",
+      "source_rows": 92353,
+      "loaded_rows": 92353
+    },
+    {
+      "filename": "transaction_data.csv",
+      "sha256": "3a685c0729cef664d634486189f774518b84f53cde7cbf701a5963238692b476",
+      "source_rows": 2595732,
+      "loaded_rows": 2595732
+    }
+  ],
+  "mv_bytes": 278528,
+  "direct": {
+    "median_ms": 8388.552,
+    "min_ms": 7749.631,
+    "max_ms": 15730.2,
+    "p95_ms": 15730.2
+  },
+  "materialized": {
+    "median_ms": 0.981,
+    "min_ms": 0.726,
+    "max_ms": 1.439,
+    "p95_ms": 1.439
+  },
+  "speedup": 8551.021406727828
+}

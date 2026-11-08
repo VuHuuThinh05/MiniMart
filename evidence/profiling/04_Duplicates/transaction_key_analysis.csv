@@ -1,0 +1,8 @@
+﻿Key_Columns,Unique_Combinations,Duplicate_Excess_Rows,Duplicate_Groups,Max_Occurrences,Is_Unique
+household_key,2500,2593232,2500,6851,False
+BASKET_ID,276484,2319248,216439,168,False
+PRODUCT_ID,92339,2503393,58725,29778,False
+household_key + BASKET_ID,276484,2319248,216439,168,False
+household_key + PRODUCT_ID,1401469,1194263,376700,246,False
+BASKET_ID + PRODUCT_ID,2595732,0,0,1,True
+household_key + BASKET_ID + PRODUCT_ID,2595732,0,0,1,True

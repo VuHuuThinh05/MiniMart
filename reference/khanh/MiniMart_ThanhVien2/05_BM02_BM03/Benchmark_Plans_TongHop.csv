@@ -1,0 +1,6 @@
+﻿benchmark,configuration,so_luot,trung_vi_ms,nho_nhat_ms,lon_nhat_ms,co_explain_json
+BM02,plain,5,69.316,61.317,78.365,YES
+BM02,partitioned,5,12.048,9.284,13.995,YES
+BM03,no_index,5,142.943,109.477,245.018,YES
+BM03,single_index,5,17.034,15.358,17.341,YES
+BM03,composite_index,5,2.191,2.099,6.281,YES

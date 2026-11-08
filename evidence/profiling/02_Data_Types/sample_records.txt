@@ -1,0 +1,334 @@
+﻿==================================================
+FILE: campaign_desc.csv
+==================================================
+
+
+DESCRIPTION : TypeB
+CAMPAIGN    : 24
+START_DAY   : 659
+END_DAY     : 719
+
+DESCRIPTION : TypeC
+CAMPAIGN    : 15
+START_DAY   : 547
+END_DAY     : 708
+
+DESCRIPTION : TypeB
+CAMPAIGN    : 25
+START_DAY   : 659
+END_DAY     : 691
+
+DESCRIPTION : TypeC
+CAMPAIGN    : 20
+START_DAY   : 615
+END_DAY     : 685
+
+DESCRIPTION : TypeB
+CAMPAIGN    : 23
+START_DAY   : 646
+END_DAY     : 684
+
+
+
+
+==================================================
+FILE: campaign_table.csv
+==================================================
+
+
+DESCRIPTION   : TypeA
+household_key : 17
+CAMPAIGN      : 26
+
+DESCRIPTION   : TypeA
+household_key : 27
+CAMPAIGN      : 26
+
+DESCRIPTION   : TypeA
+household_key : 212
+CAMPAIGN      : 26
+
+DESCRIPTION   : TypeA
+household_key : 208
+CAMPAIGN      : 26
+
+DESCRIPTION   : TypeA
+household_key : 192
+CAMPAIGN      : 26
+
+
+
+
+==================================================
+FILE: causal_data.csv
+==================================================
+
+
+PRODUCT_ID : 26190
+STORE_ID   : 286
+WEEK_NO    : 70
+display    : 0
+mailer     : A
+
+PRODUCT_ID : 26190
+STORE_ID   : 288
+WEEK_NO    : 70
+display    : 0
+mailer     : A
+
+PRODUCT_ID : 26190
+STORE_ID   : 289
+WEEK_NO    : 70
+display    : 0
+mailer     : A
+
+PRODUCT_ID : 26190
+STORE_ID   : 292
+WEEK_NO    : 70
+display    : 0
+mailer     : A
+
+PRODUCT_ID : 26190
+STORE_ID   : 293
+WEEK_NO    : 70
+display    : 0
+mailer     : A
+
+
+
+
+==================================================
+FILE: coupon.csv
+==================================================
+
+
+COUPON_UPC : 10000089061
+PRODUCT_ID : 27160
+CAMPAIGN   : 4
+
+COUPON_UPC : 10000089064
+PRODUCT_ID : 27754
+CAMPAIGN   : 9
+
+COUPON_UPC : 10000089073
+PRODUCT_ID : 28897
+CAMPAIGN   : 12
+
+COUPON_UPC : 51800009050
+PRODUCT_ID : 28919
+CAMPAIGN   : 28
+
+COUPON_UPC : 52100000076
+PRODUCT_ID : 28929
+CAMPAIGN   : 25
+
+
+
+
+==================================================
+FILE: coupon_redempt.csv
+==================================================
+
+
+household_key : 1
+DAY           : 421
+COUPON_UPC    : 10000085364
+CAMPAIGN      : 8
+
+household_key : 1
+DAY           : 421
+COUPON_UPC    : 51700010076
+CAMPAIGN      : 8
+
+household_key : 1
+DAY           : 427
+COUPON_UPC    : 54200000033
+CAMPAIGN      : 8
+
+household_key : 1
+DAY           : 597
+COUPON_UPC    : 10000085476
+CAMPAIGN      : 18
+
+household_key : 1
+DAY           : 597
+COUPON_UPC    : 54200029176
+CAMPAIGN      : 18
+
+
+
+
+==================================================
+FILE: hh_demographic.csv
+==================================================
+
+
+AGE_DESC            : 65+
+MARITAL_STATUS_CODE : A
+INCOME_DESC         : 35-49K
+HOMEOWNER_DESC      : Homeowner
+HH_COMP_DESC        : 2 Adults No Kids
+HOUSEHOLD_SIZE_DESC : 2
+KID_CATEGORY_DESC   : None/Unknown
+household_key       : 1
+
+AGE_DESC            : 45-54
+MARITAL_STATUS_CODE : A
+INCOME_DESC         : 50-74K
+HOMEOWNER_DESC      : Homeowner
+HH_COMP_DESC        : 2 Adults No Kids
+HOUSEHOLD_SIZE_DESC : 2
+KID_CATEGORY_DESC   : None/Unknown
+household_key       : 7
+
+AGE_DESC            : 25-34
+MARITAL_STATUS_CODE : U
+INCOME_DESC         : 25-34K
+HOMEOWNER_DESC      : Unknown
+HH_COMP_DESC        : 2 Adults Kids
+HOUSEHOLD_SIZE_DESC : 3
+KID_CATEGORY_DESC   : 1
+household_key       : 8
+
+AGE_DESC            : 25-34
+MARITAL_STATUS_CODE : U
+INCOME_DESC         : 75-99K
+HOMEOWNER_DESC      : Homeowner
+HH_COMP_DESC        : 2 Adults Kids
+HOUSEHOLD_SIZE_DESC : 4
+KID_CATEGORY_DESC   : 2
+household_key       : 13
+
+AGE_DESC            : 45-54
+MARITAL_STATUS_CODE : B
+INCOME_DESC         : 50-74K
+HOMEOWNER_DESC      : Homeowner
+HH_COMP_DESC        : Single Female
+HOUSEHOLD_SIZE_DESC : 1
+KID_CATEGORY_DESC   : None/Unknown
+household_key       : 16
+
+
+
+
+==================================================
+FILE: product.csv
+==================================================
+
+
+PRODUCT_ID           : 25671
+MANUFACTURER         : 2
+DEPARTMENT           : GROCERY
+BRAND                : National
+COMMODITY_DESC       : FRZN ICE
+SUB_COMMODITY_DESC   : ICE - CRUSHED/CUBED
+CURR_SIZE_OF_PRODUCT : 22 LB
+
+PRODUCT_ID           : 26081
+MANUFACTURER         : 2
+DEPARTMENT           : MISC. TRANS.
+BRAND                : National
+COMMODITY_DESC       : NO COMMODITY DESCRIPTION
+SUB_COMMODITY_DESC   : NO SUBCOMMODITY DESCRIPTION
+CURR_SIZE_OF_PRODUCT : 
+
+PRODUCT_ID           : 26093
+MANUFACTURER         : 69
+DEPARTMENT           : PASTRY
+BRAND                : Private
+COMMODITY_DESC       : BREAD
+SUB_COMMODITY_DESC   : BREAD:ITALIAN/FRENCH
+CURR_SIZE_OF_PRODUCT : 
+
+PRODUCT_ID           : 26190
+MANUFACTURER         : 69
+DEPARTMENT           : GROCERY
+BRAND                : Private
+COMMODITY_DESC       : FRUIT - SHELF STABLE
+SUB_COMMODITY_DESC   : APPLE SAUCE
+CURR_SIZE_OF_PRODUCT : 50 OZ
+
+PRODUCT_ID           : 26355
+MANUFACTURER         : 69
+DEPARTMENT           : GROCERY
+BRAND                : Private
+COMMODITY_DESC       : COOKIES/CONES
+SUB_COMMODITY_DESC   : SPECIALTY COOKIES
+CURR_SIZE_OF_PRODUCT : 14 OZ
+
+
+
+
+==================================================
+FILE: transaction_data.csv
+==================================================
+
+
+household_key     : 2375
+BASKET_ID         : 26984851472
+DAY               : 1
+PRODUCT_ID        : 1004906
+QUANTITY          : 1
+SALES_VALUE       : 1.39
+STORE_ID          : 364
+RETAIL_DISC       : -0.6
+TRANS_TIME        : 1631
+WEEK_NO           : 1
+COUPON_DISC       : 0
+COUPON_MATCH_DISC : 0
+
+household_key     : 2375
+BASKET_ID         : 26984851472
+DAY               : 1
+PRODUCT_ID        : 1033142
+QUANTITY          : 1
+SALES_VALUE       : 0.82
+STORE_ID          : 364
+RETAIL_DISC       : 0
+TRANS_TIME        : 1631
+WEEK_NO           : 1
+COUPON_DISC       : 0
+COUPON_MATCH_DISC : 0
+
+household_key     : 2375
+BASKET_ID         : 26984851472
+DAY               : 1
+PRODUCT_ID        : 1036325
+QUANTITY          : 1
+SALES_VALUE       : 0.99
+STORE_ID          : 364
+RETAIL_DISC       : -0.3
+TRANS_TIME        : 1631
+WEEK_NO           : 1
+COUPON_DISC       : 0
+COUPON_MATCH_DISC : 0
+
+household_key     : 2375
+BASKET_ID         : 26984851472
+DAY               : 1
+PRODUCT_ID        : 1082185
+QUANTITY          : 1
+SALES_VALUE       : 1.21
+STORE_ID          : 364
+RETAIL_DISC       : 0
+TRANS_TIME        : 1631
+WEEK_NO           : 1
+COUPON_DISC       : 0
+COUPON_MATCH_DISC : 0
+
+household_key     : 2375
+BASKET_ID         : 26984851472
+DAY               : 1
+PRODUCT_ID        : 8160430
+QUANTITY          : 1
+SALES_VALUE       : 1.5
+STORE_ID          : 364
+RETAIL_DISC       : -0.39
+TRANS_TIME        : 1631
+WEEK_NO           : 1
+COUPON_DISC       : 0
+COUPON_MATCH_DISC : 0
+
+
+
+
